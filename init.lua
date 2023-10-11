@@ -50,6 +50,9 @@ require('lazy').setup({
   --copilot
   'github/copilot.vim',
 
+  -- docker syntax highlihgt
+  'ekalinin/Dockerfile.vim',
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -494,6 +497,7 @@ local servers = {
   rust_analyzer = {},
   tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs' } },
+  dockerls = {},
 
   lua_ls = {
     Lua = {

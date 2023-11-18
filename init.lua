@@ -50,6 +50,8 @@ require('lazy').setup({
 
   'nvim-tree/nvim-web-devicons',
 
+  "rebelot/kanagawa.nvim",
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -233,8 +235,10 @@ prettier.setup({
 })
 
 -- colorscheme
-vim.o.background = "dark"
-vim.cmd([[colorscheme gruvbox]])
+-- vim.o.background = "dark"
+-- vim.cmd([[colorscheme gruvbox]])
+
+vim.cmd("colorscheme kanagawa-wave")
 
 -- format on save
 vim.cmd([[
@@ -503,6 +507,7 @@ local servers = {
   -- clangd = {},
   -- gopls = {},
   -- pyright = {},
+  zls = {},
   rust_analyzer = {},
   tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs' } },
